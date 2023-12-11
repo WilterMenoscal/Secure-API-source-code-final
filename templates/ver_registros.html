@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Auditoría</title>
+</head>
+<body>
+    <h2>Registros de Auditoría</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Método</th>
+                <th>Hora</th>
+                <th>Nivel</th>
+                <th>Mensaje</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+                <tr>
+                    <td>{{ registro.id }}</td>
+                    <td>{{ registro.usuario }}</td>
+                    <td>{{ registro.metodo }}</td>
+                    <td>{{ registro.hora }}</td>
+                    <td>{{ registro.nivel }}</td>
+                    <td>{{ registro.mensaje }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
